@@ -4,8 +4,15 @@ import Drink2 from "./Drink2";
 import OrderListAndRequest from "./OrderListAndRequest";
 import { Routes, Route } from "react-router-dom";
 import Order from "./Order";
+import { useState } from "react";
 
-function Main({ deleteBtn, addLists, setAddLists }) {
+function Main() {
+  let [addLists, setAddLists] = useState([]);
+
+  function deleteBtn(index) {
+    const updatedTodos = addLists.filter((e, idx) => idx !== index);
+    setAddLists(updatedTodos);
+  }
   return (
     <div>
       <h1>MENU</h1>

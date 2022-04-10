@@ -11,7 +11,7 @@ function Drink1({setAddLists}) {
             <h3>{Categories[0]}</h3>
             <Drink1Menu setAddLists={setAddLists} drink1Menu={drink1Menu}/>
             <h3>{Categories[1]}</h3>
-            <Drink1Menu  drink1Menu={drink2Menu}/>
+            <Drink1Menu setAddLists={setAddLists} drink1Menu={drink2Menu}/>
         </div>
     )
 }

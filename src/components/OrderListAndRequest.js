@@ -15,7 +15,7 @@ function OrderListAndRequest({ deleteBtn, addLists }) {
       {console.log(addLists)}
       <ul>
         {addLists.map((list, index) => (
-          <li>
+          <li key={index}>
             {list}
             {<button onClick={() => clickDeleteBtn(index)}>x</button>}
           </li>

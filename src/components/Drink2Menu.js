@@ -6,8 +6,8 @@ function Drink2Menu({ drink3Menu, setAddLists }) {
     };
     return (
       <div>
-        {drink3Menu.map((menu) => (
-          <button onClick={onClick}>{menu}</button>
+        {drink3Menu.map((menu, index) => (
+          <button key={index} onClick={onClick}>{menu}</button>
         ))}
       </div>
     );

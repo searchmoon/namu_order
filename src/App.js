@@ -6,8 +6,10 @@ import Footer from "./components/Footer";
 import { createGlobalStyle } from "styled-components";
 import Splash from "./components/Splash";
 import reset from "styled-reset";
+import { useParams } from "react-router-dom";
 
 function App() {
+  let { room } = useParams();
   const [main, setMain] = useState(false);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ function App() {
       <GlobalStyle />
       {main ? (
         <>
-          <Header />
+          <Header room={room}/>
           <Main />
           <Footer />
         </>
